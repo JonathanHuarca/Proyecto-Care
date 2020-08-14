@@ -1,0 +1,58 @@
+div.rounded.bg-light.border.p-4.mt-4
+  h3(id="addModule").text-center Section
+  hr
+  .row.justify-content-between.align-items-center
+    .col-4.form-group.row.align-items-center.text-center.mx-2
+      label.col-form-label.col Method: 
+      input(type="text" value="POST" class="form-control col text-center text-primary" readonly)
+
+    .col-4.form-group.row.align-items-center.text-center.mx-2
+      label.col-form-label.col route: 
+      input(type="text" value="/api/section" class="form-control col text-center text-primary" readonly)
+
+    .col-8.form-group.row.align-items-center.text-center.mx-auto
+      label.col-form-label.col-3 Headers: 
+      .data
+        pre.mt-3.border.rounded.p-1
+          code(json)
+            | { <span class="text-success">Authorization</span>: 'Bearer ${token}' }
+
+
+  hr
+  include addModule.pug
+  hr
+  include addModuleToUser.pug
+  hr
+  include addResolve.pug
+  hr
+  include addSection.pug
+  hr
+  include deleteFile.pug
+  hr
+  include deleteSection.pug
+  hr
+  include editFile.pug
+  hr
+  include editModule.pug
+  hr
+  include editSection.pug
+  hr
+  include getKpi.pug
+  hr
+  include getModule.pug
+  hr
+  include getModules.pug
+  hr
+  include getSection.pug
+  hr
+  include getSections.pug
+  hr
+  include getTemary.pug
+  hr
+  include inboxActivity.pug
+  hr
+  include .pug
+  hr
+  include .pug
+  hr
+  include .pug

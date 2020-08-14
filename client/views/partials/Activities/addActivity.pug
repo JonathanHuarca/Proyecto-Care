@@ -1,0 +1,47 @@
+.form-group.row.align-items-center
+    h5.col-3.text-success addActivity
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'addActivity'
+p Agregar una actividad
+p Nota:
+ul
+    li Se puede adjuntar archivo ( opcional: enviar como "files" ) 
+
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 16rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'addActivity',
+                        |     block<span class="text-danger">*</span>: Number,
+                        |     section<span class="text-danger">*</span>: Number,
+                        |     module<span class="text-danger">*</span>: Number,
+                        |     title: String,
+                        |     region: String,
+                        |     name_module: String,
+                        |     name_block: String,
+                        |     name_section: String,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 16rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'Actividad agregada correctamente',
+                        |     activity: {
+                        |       _id: String,
+                        |       nickname: String,
+                        |       module: Number,
+                        |       section: Number,
+                        |       block: Number,
+                        |       createBy: String
+                        |     }
+                        |  }

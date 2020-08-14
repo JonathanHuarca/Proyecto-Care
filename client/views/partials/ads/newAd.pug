@@ -1,0 +1,41 @@
+.form-group.row.align-items-center
+    h5(id="newAd").col-3.text-success newAd
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'newAd'
+p Agregar un anuncio
+p Nota:
+ul
+    li Se puede adjuntar archivo ( opcional: enviar como "file" ) 
+
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 16rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'newAd',
+                        |     content<span class="text-danger">*</span>: String,     
+                        |     file: archivo
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 16rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |    "message": "Anuncio creado correctamente"
+                        |       "ad": {
+                        |        "file": [],
+                        |        "_id": "String",
+                        |        "content": String,
+                        |        "createdAt": Date,
+                        |        "updatedAt": "Date",
+                        |        "__v": 0
+                        |    }
+                        |  }

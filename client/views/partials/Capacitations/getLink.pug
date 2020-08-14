@@ -1,0 +1,33 @@
+.form-group.row.align-items-center
+    h5(id="getLink").col-3.text-success Get Link
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'getLink'
+p Conseguir título, link y contraseña de la capacitación
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 5rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getLink',
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 12rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"Capacitación encontrada",
+                        |     capacitation: {
+                        |         title: String,
+                        |         link: String,
+                        |         password: String,
+                        |     }
+                        |  }

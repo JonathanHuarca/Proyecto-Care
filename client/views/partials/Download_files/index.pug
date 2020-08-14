@@ -1,0 +1,50 @@
+div.rounded.bg-light.border.p-4.mt-4
+    h3(id="download").text-center Download Files
+    hr
+    .row.justify-content-between.align-items-center
+        .col-4.form-group.row.align-items-center.text-center.mx-2
+            label.col-form-label.col Method: 
+            input(type="text" value="GET" class="form-control col text-center text-primary" readonly)
+
+        .col-4.form-group.row.align-items-center.text-center.mx-2
+            label.col-form-label.col route: 
+            input(type="text" value="/api/download/:id_download" class="form-control col text-center text-primary" readonly)
+
+
+        .col-8.form-group.row.align-items-center.text-center.mx-auto
+            label.col-form-label.col-3 Headers: 
+            .data
+                pre.mt-3.border.rounded.p-1
+                    code(json)
+                        | { <span class="text-success">Authorization</span>: 'Bearer ${token}' }
+
+    hr
+    //- Funciones disponibles
+    .form-group.row.align-items-center
+        h5.col-3.text-success Download File
+        .data
+            pre.mt-3.p-1.text-center.border.rounded
+                code(json).mx-auto
+        
+    p Descargar archivos adjuntos
+    br
+    .row.justify-content-center.mt-2
+        .col.mx-2
+            p.lead Body(JSON)
+            div(style="height: 6rem" class=" bg-light rounded border")
+                .data
+                    pre.p-2
+                        code(json)
+                            |{
+                            |     
+                            |}
+    
+        .col.mx-2
+            p.lead Response(attachment)
+            div(style="height: 6rem" class=" bg-light rounded border")
+                .data
+                    pre.p-2 
+                        code(json)
+                            |{
+                            |  Archivo para descargar   
+                            |}

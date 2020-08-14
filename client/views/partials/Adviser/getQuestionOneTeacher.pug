@@ -1,0 +1,46 @@
+.form-group.row.align-items-center
+    h5(id="getQuestionOneTeacher").col-5.text-success getQuestionOneTeacher 
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'getQuestionOneTeacher'
+p Obtener preguntas y respuestas de un profesor.
+br
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getQuestionOneTeacher',
+                        |     id_teacher<span class="text-danger">*</span>: String,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 35rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'Questions of {name} {lastname}',
+                        |     questions: [
+                        |           {
+                        |               files: [{
+                        |                   uploadedByTeacher: Boolean,
+                        |                   name_file: String,
+                        |                   pathURL: String,
+                        |                   download_id: String
+                        |               }, {...}],
+                        |               _id: String,
+                        |               block: String,
+                        |               module: String,
+                        |               section: String,
+                        |               question: String,
+                        |               createAt: Date
+                        |           } , {...}
+                        |         ]
+                        |  } 

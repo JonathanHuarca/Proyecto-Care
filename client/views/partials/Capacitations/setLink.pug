@@ -1,0 +1,48 @@
+.form-group.row.align-items-center
+    h5.col-3.text-success Set Link
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'setLink'
+p Guardar una capacitación con link
+p Nota:
+ul
+    li El campo "directed_to" es una arreglo con los id's de los profesores a los que irá dirigida la capacitación
+br
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 13rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'setLink',
+                        |     title<span class="text-danger">*</span>: String,
+                        |     link<span class="text-danger">*</span>: String,
+                        |     password<span class="text-danger">*</span>: String,
+                        |     directed_to<span class="text-danger">*</span>: Array (ejm: [ id1, id2, ..])
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 21rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"Capacitación establecida",
+                        |     capacitation: {
+                        |         _id: String,
+                        |         title: String,
+                        |         link: String,
+                        |         password: String,
+                        |         created_by: String,
+                        |         createdAt: Date,
+                        |         updatedAt: Date,
+                        |         directed_to: [
+                        |               '******', '****'    
+                        |           ],
+                        |     }
+                        |  }

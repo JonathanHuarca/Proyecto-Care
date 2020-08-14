@@ -1,0 +1,39 @@
+.form-group.row.align-items-center
+    h5(id="getStudent").col-3.text-success Get Student
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'getStudent'
+p Conseguir datos de un estudiante
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 7rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getStudent',
+                        |     id_student<span class="text-danger">*</span>: String,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 18rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"student founded",
+                        |     student:{
+                        |          id: String,
+                        |          name: String,
+                        |          lastname: String,
+                        |          dni: String,
+                        |          code: String,
+                        |          age: String,
+                        |          covid: Boolean,
+                        |          origin: String
+                        |      }
+                        |  }

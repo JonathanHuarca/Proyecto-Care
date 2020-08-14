@@ -1,0 +1,39 @@
+.form-group.row.align-items-center
+    h5(id="getAds").col-3.text-success getAds
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'getAds'
+p Obtener todos los anuncios
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 5rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getAds'
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 22rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |    "message": "Anuncios encontrados : ",
+                        |       "ads": [{
+                        |        "file": [],
+                        |        "_id": "String",
+                        |        "content": String,
+                        |        "createdAt": Date,
+                        |        "updatedAt": "Date",
+                        |        "__v": 0
+                        |    }
+                        |       {
+                        |           ...
+                        |       }
+                        |    ]
+                        |  }

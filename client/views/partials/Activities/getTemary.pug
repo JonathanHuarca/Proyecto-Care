@@ -1,0 +1,43 @@
+.form-group.row.align-items-center
+    h5(id="getTemary").col-5.text-success getTemary
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'getTemary'
+p Obtener el temario de un modulo
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getTemary',
+                        |     module<span class="text-danger">*</span>: String,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 25rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'Actividades por módulo ${module}',
+                        |     temary: [{
+                        |         block: String,
+                        |         sections: [
+                        |           {
+                        |               section: Number,
+                        |               activities: [
+                        |                 {
+                        |                   _id: String,
+                        |                   title: String,
+                        |                   finished: Number
+                        |                 }, {....}  
+                        |               ]
+                        |           } , {...}
+                        |         ],
+                        |    },{...}]
+                        |  } 

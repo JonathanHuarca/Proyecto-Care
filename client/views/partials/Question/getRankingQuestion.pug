@@ -1,0 +1,34 @@
+.form-group.row.align-items-center
+    h5(id="getRankingQuestion").col-3.text-success getRankingQuestion
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'getRankingQuestion'
+p Obtener ranking de preguntas
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getRankingQuestion',
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 13rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |[
+                        |       {
+                        |         "_id": String,
+                        |         "n_preguntas": Number,
+                        |         "n_respuestas": Number,
+                        |         "name": String,
+                        |         "lastname": String
+                        |       }, {....}   
+                        |]

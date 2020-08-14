@@ -1,0 +1,45 @@
+.form-group.row.align-items-center
+    h5.col-3.text-success Create student
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'createStudent'
+p Registrar un nuevo estudiante
+p Nota:
+ul
+    li "name" : Nombres y apellidos del alumno
+    li "id_teacher" : id del profesor
+    li "dni" : dni del alumno
+    li "code" : Código de SIS
+    li "age" : Edad del estudiante
+    li "covid" : Confirmación si tiene o no COVID
+    li "origin" : Dónde vive el estudiante
+br
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 14rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'createStudent',
+                        |     name<span class="text-danger">*</span>: String,
+                        |     id_teacher<span class="text-danger">*</span>: String,
+                        |     dni: String,
+                        |     code: String,
+                        |     age: String,
+                        |     covid: Boolean,
+                        |     origin: String
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 5rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'Student registered successfully'
+                        |  }

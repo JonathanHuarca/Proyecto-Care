@@ -1,0 +1,42 @@
+html
+  head
+    title API Care
+    block scripts
+      script(src='public/style.css')
+      link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css") 
+      script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+      script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
+      script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+        
+
+  body.p-2
+    h1.display-4.text-center API Care Documentation
+    .row.justify-content-center
+                    
+        include partials/menu/menu.pug
+
+        .col-8.p-2
+            //- Actualizaciones
+            div.rounded.bg-warning.p-3.border.mb-3
+              h4 Últimas actualizaciones
+              hr
+              ul            
+                li Nueva sección "Capacitations" con funciones getLink y setLink <span class="text-info">(fec. actualización: 17/07)</span>
+
+            include partials/Signin_and_Signup/index.pug
+            include partials/User/index.pug
+
+            //- ***********
+            include partials/Section/index.pug
+            include partials/Activities/index.pug
+            //- **********+
+            
+            include partials/Adviser/index.pug
+            include partials/Question/index.pug
+            include partials/Report/index.pug
+            include partials/Register_logout/index.pug  
+            include partials/Download_files/index.pug
+            include partials/Students/index.pug
+            include partials/Forum/index.pug
+            include partials/ads/index.pug
+            include partials/Capacitations/index.pug

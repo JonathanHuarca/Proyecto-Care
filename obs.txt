@@ -1,0 +1,47 @@
+==== docente directivo:
+	- profesor
+	- director 
+
+- docente pregunta envia=>  psicologo || asesor pedagogico
+- director contacto con los 3 ( mas el gestor )
+- docente contacto con solo 2 (psicolo y asesor)
+- interactua con los modulos de CARE ==> evaluan al profesor por cada modulo ==> se obtiene los KPI
+
+  docente tiene acceso a los modulos CARE
+  ------ MODULOS -----
+  === Modulo tiene bloque
+  === bloque tiene secciones 
+  === secciones tiene actividades
+	=== descargar formatos (PDF, audios, video , ppts) 
+
+- Mi aula
+	-> listado de alumnos (agrega manualmente) ::: [COD SIS, direccion, dni, covid-19])
+
+== ASESOR PEDAGOGICO | PSICOLOGICO | GESTOR
+	- asesor y psicologo responden al docente
+	- gestor solo responde al director 
+		-> estas respuestas generan KPI'S
+		= los KPIS los ven los roles superiores (admin, superadmin)
+
+	- tienen a su cargo 20 dicentes aprox.
+
+== Coordinador
+	- Amazonas y Cajamarca
+	- Huanuco y Pasco
+	- segementacion por genero ( por region )
+		-> estos son los visualizadores de los KPIS		-> 
+		-> generan los reportes	
+			-> los reportes llegan al admin
+
+
+== admin (2 personas aprox)
+	- crear a los usuarios y asigna un profesor a cargo
+	- genera la segmentacion de los profesores por region (amazones, cajamarca ...)
+	- pone a cargo los profesores a cada gestor, psicologo, asesor (20 docentes para cada uno)
+	- recibe los reportes generados por los cordinadores
+
+
+	- links de jitsi (solo a psicologo ,  asesor y gestor)
+
+== superadmin (lo mismo que admin)
+	- crear admins

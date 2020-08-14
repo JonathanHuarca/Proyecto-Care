@@ -1,0 +1,38 @@
+.form-group.row.align-items-center
+    h5.col-3.text-success Add module
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'addModule'
+p Agregar modulo
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 10rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'addModule',
+                        |     component<span class="text-danger">*</span>: String,
+                        |     name_module<span class="text-danger">*</span>: String
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 15rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"Modulo agregado",
+                        |     module: {
+                        |         _id: String,
+                        |         idKPI: String,
+                        |         content: String,
+                        |         created_by: String,
+                        |         createdAt: Date,
+                        |         updatedAt: Date,
+                        |     }
+                        |  }

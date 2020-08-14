@@ -1,0 +1,57 @@
+.form-group.row.align-items-center
+    h5(id="addReportExcel").col-3.text-success Add Report Excel
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'addReportExcel'
+p Crear un nuevo reporte en formato excel <span class="text-danger">*Disponible para coordinadores (rol 7)*</span>
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 31rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'addReportExcel',
+                        |     region<span class="text-danger">*</span>: String,
+                        |     table<span class="text-danger">*</span>: Array
+                        |     Ejemplo de la data en "table" :
+                        |       [{
+                        |         name_Teacher : "Teacher01"
+                        |         modulo01 : "Mod-1,sec-3",
+                        |         modulo02 : "Mod-0,sec-1",
+                        |         modulo03 : "Mod-3,sec-6",
+                        |         comment : "Muy bien :)" 
+                        |       },
+                        |       {
+                        |         name_Teacher : "Teacher02"
+                        |         modulo01 : "Mod-6,sec-1",
+                        |         modulo02 : "Mod-2,sec-3",
+                        |         modulo03 : "Mod-7,sec-4",
+                        |         comment : "Muy bien :) x2" 
+                        |       },
+                        |       {... , ... , ...}    
+                        |    ],
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 18rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message : report created ,
+                        |     report: {
+                        |         _id: String,
+                        |         state: String,
+                        |         name_report: String,
+                        |         download_id: String,
+                        |         created_by: String,
+                        |         createdAt : Date,
+                        |         region: String,
+                        |         updatedAt: Date,
+                        |     }
+                        |  }

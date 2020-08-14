@@ -1,0 +1,29 @@
+.form-group.row.align-items-center
+    h5(id="deleteStudent").col-3.text-success Delete Student
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'deleteStudent'
+p Eliminar un estudiante
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'deleteStudent',
+                        |     id_student<span class="text-danger">*</span>: String,
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 9rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"student remove",
+                        |  }

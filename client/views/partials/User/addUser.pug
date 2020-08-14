@@ -1,0 +1,43 @@
+.form-group.row.align-items-center
+    h5.col-3.text-success Add User
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'addUser'
+p Agrega usuario señalando los campos necesarios.
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 23rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'addUser',
+                        |     nickname<span class="text-danger">*</span>: String,
+                        |     password<span class="text-danger">*</span>: String,
+                        |     rol<span class="text-danger">*</span>: Number,
+                        |     region : String,
+                        |     gender: String,
+                        |     name: String,
+                        |     lastname: String,
+                        |     email: String,
+                        |     created_By: String,
+                        |     active: Boolean,
+                        |     upgrade: String,
+                        |     photo: String,
+                        |     courses: [],
+                        |     teachers: []
+                        | }
+        
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"user created"      
+                        |  }
+

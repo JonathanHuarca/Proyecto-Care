@@ -1,0 +1,29 @@
+.form-group.row.align-items-center
+    h5(id="addUserModule").col-5.text-success addUserModule
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'addUserModule'
+p Agregar las actividades a módulo de un usuario
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'addUserModule',
+                        |     module<span class="text-danger">*</span>: Number,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'Actividad agregado correctamente',
+                        |     activity: user_modules
+                        |  }

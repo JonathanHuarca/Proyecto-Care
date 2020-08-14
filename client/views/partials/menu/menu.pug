@@ -1,0 +1,177 @@
+div.col-3.p-2.row.mx-2
+          div.position-fixed.col-12
+            div(style="width: 20%; overflow-y: scroll; height: 25rem" class="rounded bg-light border p-2")
+                ul.list-unstyled.mb-0
+                    a(class="btn btn-light btn-block" href="#LoginAndRegister")
+                        li Signin and Signup
+                    a(class="btn btn-light btn-block" href="#download")
+                        li Download Files
+                    a(class="btn btn-light btn-block" href="#logout")
+                        li Register logout
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Admin
+                    div(class="collapse" id="admin") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#addUser" class="btn btn-light btn-block text-info")
+                                li addUser
+
+                            a(href="#deleteUser" class="btn btn-light btn-block text-info")
+                                li deleteUser
+
+                            a(href="#editUser" class="btn btn-light btn-block text-info")
+                                li editUser
+
+                            a(href="#getUser" class="btn btn-light btn-block text-info")
+                                li getUser
+
+                            a(href="#getUsers" class="btn btn-light btn-block text-info")
+                                li getUsers
+
+                            a(href="#addTeachers" class="btn btn-light btn-block text-info")
+                                li addTeachers
+
+                            a(href="#addModule" class="btn btn-light btn-block text-info")
+                                li addModule
+
+                            a(href="#addUserToGestor" class="btn btn-light btn-block text-info")
+                                li addUserToGestor
+
+                            a(href="#getStudentsExcel" class="btn btn-light btn-block text-info")
+                                li getStudentsExcel
+                    
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#activities" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Activities
+                    div(class="collapse" id="activities") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#addActivity" class="btn btn-light btn-block text-info")
+                                li addActivity
+
+                            a(href="#getActivity" class="btn btn-light btn-block text-info")
+                                li getActivity
+
+                            a(href="#getTemary" class="btn btn-light btn-block text-info")
+                                li getTemary
+
+                            a(href="#getKpi1" class="btn btn-light btn-block text-info")
+                                li getKpi
+
+                            a(href="#addUserModule" class="btn btn-light btn-block text-info")
+                                li addUserModule
+
+                            a(href="#getRankingTeacher" class="btn btn-light btn-block text-info")
+                                li getRankingTeacher
+
+                            a(href="#uploadFile" class="btn btn-light btn-block text-info")
+                                li uploadFile
+
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#adviser_list" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Adviser
+                    div(class="collapse" id="adviser_list") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#adviser" class="btn btn-light btn-block text-info")
+                                li getTeachers
+
+                            a(href="#getQuestionsOfTeachers" class="btn btn-light btn-block text-info")
+                                li getQuestionsOfTeachers
+
+                            a(href="#getQuestionOneTeacher" class="btn btn-light btn-block text-info")
+                                li getQuestionOneTeacher
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#ads_list" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Anuncios
+                    div(class="collapse" id="ads_list") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#newAd" class="btn btn-light btn-block text-info")
+                                li newAd
+
+                            a(href="#getAds" class="btn btn-light btn-block text-info")
+                                li getAds
+                            
+
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#question" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Question
+                    div(class="collapse" id="question") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#addQuestion" class="btn btn-light btn-block text-info")
+                                li addQuestion
+
+                            a(href="#getQuestionHistory" class="btn btn-light btn-block text-info")
+                                li getQuestionHistory
+                            
+                            a(href="#getQuestionForo" class="btn btn-light btn-block text-info")
+                                li getQuestionForo
+
+                            a(href="#getRankingQuestion" class="btn btn-light btn-block text-info")
+                                li getRankingQuestion
+
+                            a(href="#answerQuestion" class="btn btn-light btn-block text-info")
+                                li answerQuestion
+                            
+
+                    a(class="btn btn-light btn-block" data-toggle="collapse" href="#report" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Report
+                    div(class="collapse mt-1" id="report") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#addReport" class="btn btn-light btn-block text-info")
+                                li addReport
+
+                            a(href="#getReports" class="btn btn-light btn-block text-info")
+                                li getReports
+                            a(href="#addReportExcel" class="btn btn-light btn-block text-info")
+                                li add Report Excel
+
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#student" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Students
+                    div(class="collapse" id="student") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#createStudent" class="btn btn-light btn-block text-info")
+                                li createStudent
+
+                            a(href="#updateStudent" class="btn btn-light btn-block text-info")
+                                li updateStudent
+                            
+                            a(href="#getStudent" class="btn btn-light btn-block text-info")
+                                li getStudent
+
+                            a(href="#getStudents" class="btn btn-light btn-block text-info")
+                                li getStudents
+
+                            a(href="#deleteStudent" class="btn btn-light btn-block text-info")
+                                li deleteStudent
+                    a(class="btn btn-light btn-block mt-0" data-toggle="collapse" href="#forum" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Forum
+                    div(class="collapse" id="forum") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#joinForum" class="btn btn-light btn-block text-info")
+                                li join Forum
+
+                            a(href="#getTeacherForum" class="btn btn-light btn-block text-info")
+                                li get Teacher Forum
+                            
+                            a(href="#addQuestionForum" class="btn btn-light btn-block text-info")
+                                li add Question forum
+
+                            a(href="#answerQuestionForum" class="btn btn-light btn-block text-info")
+                                li answer question forum
+
+                    a(class="btn btn-light btn-block" data-toggle="collapse" href="#capacitation" role="button" aria-expanded="false" aria-controls="collapseExample")
+                        li Capacitation
+                    div(class="collapse mt-1" id="capacitation") 
+                      .card.card-body.bg-light
+                        ul.list-unstyled
+                            a(href="#setLink" class="btn btn-light btn-block text-info")
+                                li setLink
+                            a(href="#getLink" class="btn btn-light btn-block text-info")
+                                li getLink
+
+            
+            div(style="width: 20%" class=" rounded col-12 bg-light border p-2 my-2 text-center pb-0")
+              p.mb-0 <span class="text-danger">*</span> : Campo obligatorio
+            

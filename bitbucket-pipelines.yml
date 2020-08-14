@@ -1,0 +1,15 @@
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        deployment: production
+        script:
+          - pipe: atlassian/aws-s3-deploy:0.4.4
+            variables:
+              AWS_ACCESS_KEY_ID:  'AKIAI7GES2KJINC3WXMQ' 
+              AWS_SECRET_ACCESS_KEY:  '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'
+              AWS_DEFAULT_REGION: 'ap-southeast-2'
+              S3_BUCKET: 'care-back-repo'
+              LOCAL_PATH: './'
+              ACL: 'public-read'

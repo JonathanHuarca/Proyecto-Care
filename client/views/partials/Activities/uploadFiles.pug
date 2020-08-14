@@ -1,0 +1,33 @@
+.form-group.row.align-items-center
+    h5(id="uploadFile").col-5.text-success uploadFile
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'uploadFile'
+p Subir archivo de actividad
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'uploadFile',
+                        |     id_activity<span class="text-danger">*</span>: String,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 12rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'Archivo(s) de la actividad subidos correctamente',
+                        |     activity: {
+                        |        _id: String,
+                        |        title: String,
+                        |        finished: Number
+                        |     }
+                        |  } 

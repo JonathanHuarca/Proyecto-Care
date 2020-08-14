@@ -1,0 +1,41 @@
+.form-group.row.align-items-center.p-0
+        h5(id="addTeachers").col-3.text-success Add Teachers
+        .data
+            pre.mt-3.p-1.text-center.border.rounded
+                code(json).mx-auto
+                    |  fname: 'addTeachers' 
+p Agregar docente o director a psicologo, asesor o gestor 
+p Nota:
+ul
+    li "id_UserDestination" : id de psicologo, asesor o gestor
+    li "id_teacher" : id de docente o director
+br
+
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 13rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'addTeachers',
+                        |     id_UserDestination<span class="text-danger">*</span>: String,
+                        |     id_teacher<span class="text-danger">*</span>: String,
+                        | }
+        
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 13rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: "directivo/docente add",
+                        |     user (lista de directivos/profesores): [
+                        |       {
+                        |         id_teacher: String,
+                        |         added_by: String
+                        |       }                         
+                        |     ]
+                        |  }

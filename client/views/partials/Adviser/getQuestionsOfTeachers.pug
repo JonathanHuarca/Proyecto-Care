@@ -1,0 +1,46 @@
+.form-group.row.align-items-center
+    h5(id="getQuestionsOfTeachers").col-5.text-success getQuestionsOfTeachers 
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'getQuestionsOfTeachers'
+p Obtener preguntas de profesores y directivos que tengan cargo a un gestor, psicólogo o asesor en específico (id_manager).
+span.text-danger *Disponible solo para gestores (6), asesores (3) y psicólogos (2)* 
+br
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getQuestionsOfTeachers',
+                        |     id_manager<span class="text-danger">*</span>: String,
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 25rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message: 'question of teachers founded',
+                        |     teachers_questions: [{
+                        |         lastname: String,
+                        |         position: String,
+                        |         name: String,
+                        |         numberOfQuestionsAnswered: Number,
+                        |         preguntas: [
+                        |           {
+                        |               block: String,
+                        |               module: String,
+                        |               question: String,
+                        |               section: String,
+                        |               createAt: Date
+                        |           } , {...}
+                        |         ],
+                        |    },{...}]
+                        |  } 

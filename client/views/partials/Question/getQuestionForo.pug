@@ -1,0 +1,50 @@
+.form-group.row.align-items-center
+    h5(id="getQuestionForo").col-3.text-success getQuestionForo
+    .data
+        pre.mt-3.p-1.text-center.border.rounded
+            code(json).mx-auto
+                |  fname: 'getQuestionForo'
+p Obtener preguntas de todos los profesores filtrado por módulo, sección y bloque
+br
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 10rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getQuestionForo',
+                        |     module<span class="text-danger">*</span>: String
+                        |     section<span class="text-danger">*</span>: String
+                        |     block<span class="text-danger">*</span>: String
+                        | }
+    
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 30rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |     message:"questions founded",
+                        |     question: [{
+                        |         askedBy: String,
+                        |         answeredBy: String,
+                        |         question: String,
+                        |         answer: String,
+                        |         dateCreation: String
+                        |         files_answer: [{
+                        |           download_id: String,
+                        |           uploadedByTeacher: Boolean,
+                        |           name_file: String,
+                        |           pathURL: String
+                        |         }, {...}],
+                        |         files_question: [{
+                        |           download_id: String,
+                        |           uploadedByTeacher: Boolean,
+                        |           name_file: String,
+                        |           pathURL: String
+                        |         }, {...}]
+                        |     }, {...}]
+                        |  }

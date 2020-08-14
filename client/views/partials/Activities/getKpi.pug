@@ -1,0 +1,39 @@
+.form-group.row.align-items-center
+    h5(id="getKpi1").col-5.text-success getKpi
+    .data
+      pre.mt-3.p-1.text-center.border.rounded
+        code(json).mx-auto
+          |  fname: 'getKpi'
+p Obtener datos KPI
+.row.justify-content-center.mt-2
+    .col.mx-2
+        p.lead Body(JSON)
+        div(style="height: 6rem" class=" bg-light rounded border")
+            .data
+                pre.p-2
+                    code(json)
+                        |{
+                        |     fname<span class="text-danger">*</span>: 'getKpi'
+                        | }
+
+    .col.mx-2
+        p.lead Response(JSON)
+        div(style="height: 21rem" class=" bg-light rounded border")
+            .data
+                pre.p-2 
+                    code(json)
+                        |{
+                        |   kpi: {
+                        |     card_title: [{
+                        |         title: String,
+                        |         average: Number,
+                        |         index: Number,
+                        |         data: 
+                        |           {
+                        |               dataModule1: Array,
+                        |               dataModule2: Array,
+                        |               dataModule3: Array,
+                        |           }
+                        |    },{...}]
+                        |  } 
+                        |} 

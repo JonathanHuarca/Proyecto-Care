@@ -1,0 +1,39 @@
+
+div.rounded.bg-light.border.p-4.mt-4
+    h3(id="addUser").text-center Admin
+    p.text-center.text-danger * Solo usuarios con roles admin (1) y super admin (0) pueden usar estos métodos *
+    hr
+    .row.justify-content-between.align-items-center
+        .col-4.form-group.row.align-items-center.text-center.mx-2
+            label.col-form-label.col Method: 
+            input(type="text" value="POST" class="form-control col text-center text-primary" readonly)
+
+        .col-4.form-group.row.align-items-center.text-center.mx-2
+            label.col-form-label.col route: 
+            input(type="text" value="/api/admin" class="form-control col text-center text-primary" readonly)
+
+    .col-8.form-group.row.align-items-center.text-center.mx-auto
+        label.col-form-label.col-3 Headers: 
+        .data
+            pre.mt-3.border.rounded.p-1
+                code(json)
+                | { <span class="text-success">Authorization</span>: 'Bearer ${token}' }
+
+    hr
+    include addUser.pug
+    hr
+    include deleteUser.pug
+    hr
+    include editUser.pug
+    hr
+    include getUser.pug
+    hr
+    include getUsers.pug
+    hr
+    include addTeachers.pug
+    hr
+    include addModule.pug
+    hr
+    include addUserToGestor.pug
+    hr
+    include getStudentsExcel.pug
